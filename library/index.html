@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <title>MonLivre</title>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </head>
+    
+    <body>
+        <div id="bloc_page">
+
+            <header>
+                
+                <div id="logoWrap">
+                    <div id="logo" >
+                        <a href="#" class="logoClick">
+                            <span class="logoTemp">
+                                <img src="images/livre_logo.jpg" alt="Logo de livre" />
+                                <h1 class="logoText">MonLivre</h1> 
+                            </span>
+                        </a>
+                           
+                    </div>
+                </div>
+               
+
+                <div id="searchWrap">
+
+                    <form action="">
+                        <input type="text" class="searchSt" name="input">
+                        <button class="submitButton">
+                                    <i class="fas fa-search"></i>
+                                    
+                        </button>
+                    </form>
+                </div>
+
+                    <!--Barre de recherche-->
+                            
+                                <div class="search-box">
+                                    <input type="text" placeholder="Tapez votre recherche...">
+                                    <div class="search-icon">
+                                    <i class="fas fa-search"></i>
+                                    </div>
+                                    <div class="cancel-icon">
+                                        <i class="fas fa-times"></i>
+                                    </div>
+                                    <div class="search-data"></div>
+                                </div>
+
+                                <script>
+                                    const searchBox = document.querySelector(".search-box");
+                                    const searchBtn = document.querySelector(".search-icon");
+                                    const cancelBtn = document.querySelector(".cancel-icon");
+                                    const searchInput = document.querySelector("input");
+                                    const searchData = document.querySelector(".search-data");
+                                    searchBtn.onclick =()=>{
+                                        searchBox.classList.add("active");
+                                        searchBtn.classList.add("active");
+                                        searchInput.classList.add("active");
+                                        cancelBtn.classList.add("active");
+                                        searchInput.focus();
+                                        if(searchInput.value != ""){
+                                            var values = searchInput.value;
+                                            searchData.classList.remove("active");
+                                            searchData.innerHTML = "Vous venez de rechercher " + "<span style='font-weight: 500;'>" + values + "</span>";
+                                        }
+                                        else{
+                                            searchData.textContent = "";
+                                        }
+                                     }
+                                    cancelBtn.onclick =()=>{
+                                        searchBox.classList.remove("active");
+                                        searchBtn.classList.remove("active");
+                                        searchInput.classList.remove("active");
+                                        cancelBtn.classList.remove("active");
+                                        searchData.classList.toggle("active");
+                                        searchInput.value = "";
+                                    }
+                                </script>
+
+                                                 <!--Fin de la barre de recherche-->
+                
+
+                <div id="navRight">
+                    
+                        
+                            <a href="index.html" >Accueil</a>
+                            <a href="signin.html">signin</a>
+                            <a href="product.html">Buy</a>
+                    
+                </div>
+
+                <div class="navIcons">
+                    <a href="#" ><img class="loginIcon" src="images/login.jpg" /></a>
+                    <a href="signin.css"><img class="loginIcon" src="images/login.jpg" /></a>
+                    <a href="#"><img class="loginIcon" src="images/login.jpg" /></a>
+                </div>
+                
+            </header>
+            
+            <div id="content" ></div>
+            <div id="banniere_image">
+                <div id="banniere_description">
+                    Présentation du site...
+                    <a href="#" class="bouton_rouge">Voir l'article <img src="images/flecheblanchedroite.png" alt="" /></a>
+                </div>
+            </div>
+            
+            
+            
+            <footer>
+                <div id="contact">
+                    <h1>Contactez-nous</h1>
+                    <div id="listes_contact">
+                        <ul>
+                            <li><a href="#">Par mail</a></li>
+                            <li><a href="#">Par téléphone</a></li>
+                            <li><a href="#">Votre avis compte !</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
