@@ -72,7 +72,7 @@ header
 
 .menuIcon
 {
-  margin-left: :0PX;
+  margin-left: 20PX;
   margin-right: 20px;
   flex-shrink: 4;
   display: inline-block;
@@ -671,3 +671,185 @@ ul.social-icons {
 .fa-github:hover {
     background-color: #5a32a3;
 }
+
+
+
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  max-width: 80%;
+  margin-top:100px;
+  border-radius: 15px;
+  margin: 100px;
+  position: center;
+  grid-template-areas:
+  
+    "item1 item2 item3 item4"
+    "item5 item6 item7 item8"
+    "item9 item10 item11 item12"
+  
+}
+.item1 {
+  background: rgb(182, 160, 131);
+  grid-area: item1;
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 1fr ;
+  grid-template-areas:
+  
+    "image"
+    "description"
+}
+.item2 {
+  background:rgb(182, 160, 131);
+  grid-area: item2;
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 1fr ;
+  grid-template-areas:
+  
+    "image"
+    "description"
+}.item3 {
+  background: rgb(182, 160, 131);
+  grid-area: item3;
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 1fr ;
+  grid-template-areas:
+  
+    "image"
+    "description"
+}.item4 {
+  background:rgb(182, 160, 131);
+  grid-area: item4;
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 1fr ;
+  grid-template-areas:
+  
+    "image"
+    "description"
+}.item5 {
+  background: rgb(182, 160, 131);
+  grid-area: item5;
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 1fr ;
+  grid-template-areas:
+  
+    "image"
+    "description"
+}.item6 {
+  background: rgb(182, 160, 131);
+  grid-area: item6;
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 1fr ;
+  grid-template-areas:
+  
+    "image"
+    "description"
+}.item7 {
+  background: rgb(182, 160, 131);
+  grid-area: item7;
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 1fr ;
+  grid-template-areas:
+  
+    "image"
+    "description"
+}.item8 {
+  background: rgb(182, 160, 131);
+  grid-area: item8;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 1fr ;
+  grid-template-areas:
+  
+    "image"
+    "description"
+}
+
+.item9 {
+  background: rgb(182, 160, 131);
+  grid-area: item9;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 1fr ;
+  grid-template-areas:
+  
+    "image"
+    "description"
+}
+.item10 {
+  background: rgb(182, 160, 131);
+  grid-area: item10;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 1fr ;
+  grid-template-areas:
+  
+    "image"
+    "description"
+}
+.item11 {
+  background: rgb(182, 160, 131);
+  grid-area: item11;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 1fr ;
+  grid-template-areas:
+  
+    "image"
+    "description"
+}
+.item12 {
+  background:rgb(182, 160, 131);
+  grid-area: item12;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 1fr ;
+  grid-template-areas:
+  
+    "image"
+    "description"
+}
+
+
+.image {grid-area: image;
+height:100%;}
+
+.description{grid-area: description;
+  }
+
+  .pagination {
+    display: inline-block;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  .pagination a:hover:not(.active) {background-color: black;
+    color:white;
+  position: center;}
