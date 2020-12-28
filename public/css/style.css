@@ -859,3 +859,9 @@ height:100%;}
   .pagination a:hover:not(.active) {background-color: black;
     color:white;
   position: center;}
+
+  .dropdown:hover > #cart-dropdown{
+    display: block;
+    
+}
+
