@@ -18,6 +18,7 @@ class CreateBooksTable extends Migration
             $table->char('Title', 100);
             $table->char('Author', 100);
             $table->char('Category', 100);
+            $table->text('Description');
             $table->float('Price', 8, 2);
         });
     }

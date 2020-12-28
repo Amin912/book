@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BooksController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -43,3 +44,13 @@ Route::get('/cart', function () {
 Route::get('/book', function () {
     return view('/book');
 });
+
+Route::get('/add', function(){
+    return view('admin/adminBook');
+});
+
+Route::resource('book', BooksController::class);
+
+//Route::get('/home', [App\Http\Controllers\BooksController::class, 'createBook'])->name('books.store');
+
+//Route::resource('books', [App\Http\Controllers\BooksController::class]);
