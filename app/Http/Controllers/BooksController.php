@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Book;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
+
 
 class BooksController extends Controller
 {
@@ -55,7 +57,22 @@ class BooksController extends Controller
      */
     public function show($id)
     {
-        //
+        $b_id = (int)($id);
+        //$books = DB::table('books')->where('b_Id', $b_id)->get();
+        //echo $books;
+        /*
+        $data = [
+            'Title' => $book->Title,
+            'Author' => $book->Author,
+            'Category' => $book->Category,
+            'Description' => $book->Description,
+            'Price' => $book->Price,
+        ];
+        */
+        //return view('exampleBook',compact('books'));
+        return $books = DB::table('books');
+        return $books->first();
+
     }
 
     /**

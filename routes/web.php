@@ -51,6 +51,4 @@ Route::get('/add', function(){
 
 Route::resource('book', BooksController::class);
 
-//Route::get('/home', [App\Http\Controllers\BooksController::class, 'createBook'])->name('books.store');
-
-//Route::resource('books', [App\Http\Controllers\BooksController::class]);
+Route::get('/book/{id}', [BooksController::class, 'show']);
