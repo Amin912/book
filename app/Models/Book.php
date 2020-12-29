@@ -25,5 +25,4 @@ class Book extends Model implements HasMedia
     protected $fillable = [
         'Title', 'Author', 'Category' ,'Description', 'Price',
     ];
-    public $timestamps = false;
 }

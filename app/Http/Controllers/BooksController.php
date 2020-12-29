@@ -17,7 +17,7 @@ class BooksController extends Controller
      */
     public function index()
     {
-        //
+       //
     }
 
     /**
@@ -58,8 +58,17 @@ class BooksController extends Controller
     public function show($id)
     {
         $b_id = (int)($id);
-        //$books = DB::table('books')->where('b_Id', $b_id)->get();
-        //echo $books;
+        $book = Book::where('b_Id', $b_id)->first();
+        
+        $id = Media::where('model_id', $b_id)->value('id');
+        $name = Media::where('model_id', $b_id)->value('file_name');
+
+        
+
+        $path = 'storage/'.$id.'/'.$name;
+
+        //echo $book->getMedia('cover');
+        
         /*
         $data = [
             'Title' => $book->Title,
@@ -69,9 +78,17 @@ class BooksController extends Controller
             'Price' => $book->Price,
         ];
         */
-        //return view('exampleBook',compact('books'));
-        $books = DB::table('books')->where('b_Id', $b_id)->get();
+        return view('exampleBook', ['book'=>$book, 'path'=>$path]);
+        //return $books = Book::where('b_Id', $b_id)->first()->getMedia('cover');
 
+    }
+
+    public function getCover($id)
+    {
+        $b_id = (int)($id);
+        $book = Book::where('b_Id', $b_id)->first();
+
+        $media = Media::where('model_id', $b_id)->value('id', 'file_name');
     }
 
     /**

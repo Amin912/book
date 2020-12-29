@@ -52,3 +52,5 @@ Route::get('/add', function(){
 Route::resource('book', BooksController::class);
 
 Route::get('/book/{id}', [BooksController::class, 'show']);
+
+Route::get('/index', [BooksController::class, 'index']);

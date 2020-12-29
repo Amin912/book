@@ -20,6 +20,7 @@ class CreateBooksTable extends Migration
             $table->char('Category', 100);
             $table->text('Description');
             $table->float('Price', 8, 2);
+            $table->timestamps();
         });
     }
 
