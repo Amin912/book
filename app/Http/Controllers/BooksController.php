@@ -70,8 +70,7 @@ class BooksController extends Controller
         ];
         */
         //return view('exampleBook',compact('books'));
-        return $books = DB::table('books');
-        return $books->first();
+        $books = DB::table('books')->where('b_Id', $b_id)->get();
 
     }
 
