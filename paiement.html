@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>Paiement </title>
+
+
+    <!-- Bootstrap core CSS -->
+
+<link href="bs/css/bootstrap-utilities.css" rel="stylesheet">
+<link href="bs/css/bootstrap.css" rel="stylesheet">
+
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="paiement.css" rel="stylesheet">
+    
+  </head>
+  <body class="bg-light" background="img/Capture.JPG">
+  
+    
+    
+<div class="container">
+  <main>
+
+    <div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4" src="img/livre_logo.jpg" alt="" width="72" height="57">
+      <h2>Formulaire de paiement</h2>
+    </div>
+
+    <div class="row g-3">
+      <div class="col-md-5 col-lg-4 order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-muted">Panier</span>
+          <span class="badge bg-secondary rounded-pill">3</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Produit 1</h6>
+              <small class="text-muted">Description</small>
+            </div>
+            <span class="text-muted">$12</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Produit 2</h6>
+              <small class="text-muted">Description</small>
+            </div>
+            <span class="text-muted">$8</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Produit 3</h6>
+              <small class="text-muted">Description</small>
+            </div>
+            <span class="text-muted">$5</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between bg-light">
+            <div class="text-success">
+              <h6 class="my-0">code Promo</h6>
+              <small>EXEMPLECODE</small>
+            </div>
+            <span class="text-success">−$5</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Total (USD)</span>
+            <strong>$20</strong>
+          </li>
+        </ul>
+
+        <form class="card p-2">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Code promo">
+            <button type="submit" class="btn btn-secondary">Racheter</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Adresse de facturation</h4>
+        <form class="needs-validation" novalidate>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">Nom</label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Le nom doit être valide.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Prénom</label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Le prénom doit être valide.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="username" class="form-label">Nom d'utilisateur</label>
+              <div class="input-group">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" id="username" placeholder="Username" required>
+              <div class="invalid-feedback">
+                  Veuillez entrer votre nom d'utilisateur.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email <span class="text-muted">(optionnel)</span></label>
+              <input type="email" class="form-control" id="email" placeholder="exemple@exemple.com">
+              <div class="invalid-feedback">
+                Un mail valide est demandé pour recevoir les nouvelles.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label">Adresse</label>
+              <input type="text" class="form-control" id="address" placeholder=" EHTP Km 7, Route d'El Jadida, BP : 8108 Oasis" required>
+              <div class="invalid-feedback">
+                Entrer une adresse de livraison.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address2" class="form-label">Adresse 2 <span class="text-muted">(optionnel)</span></label>
+              <input type="text" class="form-control" id="address2" placeholder="Appartement">
+            </div>
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">Pays</label>
+              <select class="form-select" id="country" required>
+                <option value="">Choisissez...</option>
+                <option>Maroc</option>
+              </select>
+              <div class="invalid-feedback">
+                Séléctionnez un pays valide.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="state" class="form-label">La ville</label>
+              <select class="form-select" id="state" required>
+                <option value="">Choisissez...</option>
+                <option>Casablanca</option>
+              </select>
+              <div class="invalid-feedback">
+                Séléctionnez une ville valide.
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="zip" class="form-label">Code postal</label>
+              <input type="text" class="form-control" id="zip" placeholder="" required>
+              <div class="invalid-feedback">
+               Un code postal est demandé.
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="same-address">
+            <label class="form-check-label" for="same-address">Mon adresse de livraison est la même que mon adresse de facturation.</label>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="save-info">
+            <label class="form-check-label" for="save-info">Enregistrer l'avancement.</label>
+          </div>
+
+          <hr class="my-4">
+
+          <h4 class="mb-3">Mode de paiement</h4>
+
+          <div class="my-3">
+            <div class="form-check">
+              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+              <label class="form-check-label" for="credit">Carte de crédit</label>
+            </div>
+            <div class="form-check">
+              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+              <label class="form-check-label" for="paypal">PayPal</label>
+            </div>
+          </div>
+
+          <div class="row gy-3">
+            <div class="col-md-6">
+              <label for="cc-name" class="form-label">Nom sur la carte</label>
+              <input type="text" class="form-control" id="cc-name" placeholder="" required>
+              <small class="text-muted">le nom complet qui est sur la carte</small>
+              <div class="invalid-feedback">
+                Le nom est demandé.
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="cc-number" class="form-label">Numéro de la carte</label>
+              <input type="text" class="form-control" id="cc-number" placeholder="" required>
+              <div class="invalid-feedback">
+                Le numéro de la carte est demandé
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cc-expiration" class="form-label">Expiration</label>
+              <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+              <div class="invalid-feedback">
+                La date d'Expiration
+              </div>
+            </div>
+
+            
+          </div>
+
+          <hr class="my-4">
+
+          <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2020 2GI</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#"></a></li>
+    </ul>
+  </footer>
+</div>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      <script src="paiement.js"></script>
+  </body>
+</html>
